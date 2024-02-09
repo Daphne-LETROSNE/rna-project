@@ -2,7 +2,7 @@ The process is composed in 3 steps, corresponding to 3 scripts:
 
 All process should be run in the script directory : 
 
-### First process 
+## First process 
 
 Related script : Step1_RNA.py
 
@@ -24,19 +24,19 @@ This script performs several tasks related to analyzing RNA structures.
 
 **Writing scores to files:** The computed scores are written to files for each base pair interaction.
 
-#### Inputs
+### Inputs
 - PDB files: These are files containing the structure information of RNA molecules.
 - Base pairs: A list of base pair interactions (e.g., 'AA', 'AU', etc.).
 
 Notes: If you want to try to train it with a another file, you should change the line 141 :  pdb_files = ['1c2x.pdb'], and replace '1c2x.pdb' by the file of interest. 
 
-#### Outputs
+### Outputs
 - Score files: Each base pair interaction has a corresponding file ('AA_scores.txt', 'AU_scores.txt', etc.) containing computed scores.
   
 
 
 
-### Second process 
+## Second process 
 
 Related script : Step2_RNA.py
 
@@ -48,7 +48,7 @@ Related script : Step2_RNA.py
 
 
 
-**Functionalities of the script:**
+### Functionalities of the script:
 
 **Reading score files:** The script reads the score values from each file ending with "_scores.txt" in the current directory.
 
@@ -60,17 +60,17 @@ Related script : Step2_RNA.py
 
 The script provides a visual representation of the scores associated with different base pair interactions, allowing for easy comparison and analysis.
 
-### Third process
+## Third process
 
 Related script : Step3_RNA.py
 
-#### Inputs
+### Inputs
 
 - **PDB files**: These are files containing the coordinates of atoms in a 3D structure of an RNA molecule.
 
 - **Score files**: These are files containing scores associated with different base pair interactions (e.g., AA_scores.txt, AU_scores.txt, etc.).
 
-#### Output 
+### Output 
 
 - **scores**: A dictionary where each key represents a base pair interaction (e.g., 'AA', 'AU', etc.), and the corresponding value is a list of interpolated scores based on the interatomic distances for that base pair.
 
@@ -78,7 +78,7 @@ Related script : Step3_RNA.py
 
 
 
-**Functionalities of the script:**
+### Functionalities of the script
 
 **Parsing PDB files:** 
 The script reads the coordinates of atoms from a PDB file, focusing on atoms labeled as 'C3''.
