@@ -1,0 +1,2 @@
+matplotlib==3.4.3
+python_version>=3.6,<4
